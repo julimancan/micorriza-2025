@@ -24,16 +24,14 @@ export const generateMetadata = async (): Promise<Metadata> => {
       openGraph: {
         title: seo.title,
         description: seo.description,
-        images: logo?.logo
-          ? [
-              {
-                url: urlFor(logo.logo).url(),
-                width: 1880,
-                height: 1125,
-                alt: "Logo de Micorriza Musica",
-              },
-            ]
-          : undefined,
+        images: [
+          {
+            url: "https://cdn.sanity.io/images/bbgd3it4/production/21c39d2f464f1d730669be685e1955852d00e70a-1261x779.png",
+            width: 1880,
+            height: 1125,
+            alt: "Logo de Micorriza Musica",
+          },
+        ],
       },
       // favicon: logo?.logo ? urlFor(logo.logo).url() : undefined,
     };
