@@ -5,6 +5,7 @@ import { getLogo } from "@/sanity/queries/siteSettingsQueries";
 import { urlFor } from "@/sanity/lib/image";
 import localFont from "next/font/local";
 import { Tilt_Neon, Inter, Reem_Kufi_Fun } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const seo = await getHomepageSeo();
@@ -65,6 +66,8 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-9FQX9HCQ1B" />
+
       <body
         className={`${inter.className} ${mailart.variable} ${tiltLeon.variable} ${reemKufiFun.variable}`}
       >
