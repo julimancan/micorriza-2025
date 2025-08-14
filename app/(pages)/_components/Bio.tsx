@@ -20,10 +20,10 @@ const Bio = ({
 }) => {
   return (
     <section className="py-24 px-6 bg-band-darker">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-full lg:max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-band-light">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-8 text-band-light">
               {bio?.title}
             </h2>
             {bio?.text && <SanityTextBlock value={bio?.text} />}

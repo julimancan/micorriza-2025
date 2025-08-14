@@ -17,7 +17,9 @@ export const textBlockComponents: PortableTextComponents = {
       <h2 className="text-base font-semibold">{children}</h2>
     ),
     normal: ({ children }) => (
-      <p className="text-lg text-band-muted mb-6 leading-relaxed">{children}</p>
+      <p className="text-base lg:text-lg text-band-muted mb-6 leading-relaxed">
+        {children}
+      </p>
     ),
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 pl-4 italic">{children}</blockquote>
