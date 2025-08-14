@@ -4,7 +4,13 @@ import { YoutubeApiResponse } from "@/app/lib/getYoutubeVideosFromPlaylistId";
 import YoutubeIframe from "./YoutubeIframe";
 import { useEffect, useState } from "react";
 
-const Videos = ({ playlistLink }: { playlistLink: string }) => {
+const Videos = ({
+  playlistLink,
+  title,
+}: {
+  playlistLink: string;
+  title: string;
+}) => {
   const [showAll, setShowAll] = useState(false);
   const [playlist, setPlaylist] = useState<YoutubeApiResponse["items"]>([]);
 
@@ -41,9 +47,8 @@ const Videos = ({ playlistLink }: { playlistLink: string }) => {
     <section className="py-24 px-6 bg-band-dark">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-band-light">
-          Latest
           <span className="bg-gradient-accent bg-clip-text text-transparent ml-4">
-            Videos
+            {title}
           </span>
         </h2>
 

@@ -18,7 +18,10 @@ export default async function Home() {
       {content?.bio && <Bio bio={content.bio} fotos={content.photos} />}
 
       {content?.youtubePlaylist?.youtubePlaylistLink && (
-        <Videos playlistLink={content.youtubePlaylist.youtubePlaylistLink} />
+        <Videos
+          title={content.youtubePlaylist.titulo ?? "Videos"}
+          playlistLink={content.youtubePlaylist.youtubePlaylistLink}
+        />
       )}
       {siteSettings?.subscribe && (
         <Subscribe subscribe={siteSettings.subscribe} />
