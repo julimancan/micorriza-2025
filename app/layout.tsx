@@ -21,23 +21,37 @@ export const generateMetadata = async (): Promise<Metadata> => {
             apple: urlFor(logo.logo).url(),
           }
         : undefined,
+      alternates: {
+        canonical: `/`,
+      },
       openGraph: {
         title: seo.title,
         description: seo.description,
         images: [
           {
             url: "https://cdn.sanity.io/images/bbgd3it4/production/21c39d2f464f1d730669be685e1955852d00e70a-1261x779.png",
-            width: 1880,
-            height: 1125,
-            alt: "Logo de Micorriza Musica",
+            width: 1200,
+            height: 630,
+            alt: "Micorriza Musica",
           },
         ],
       },
-      // favicon: logo?.logo ? urlFor(logo.logo).url() : undefined,
     };
   return {
     title: "Micorriza Musica",
     description: "Sitio web de la banda colombiana Micorriza",
+    openGraph: {
+      title: "Micorriza Musica",
+      description: "Sitio web de la banda colombiana Micorriza",
+      images: [
+        {
+          url: "https://cdn.sanity.io/images/bbgd3it4/production/21c39d2f464f1d730669be685e1955852d00e70a-1261x779.png",
+          width: 1200,
+          height: 630,
+          alt: "Micorriza Musica",
+        },
+      ],
+    },
   };
 };
 
