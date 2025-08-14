@@ -5,8 +5,6 @@ import Videos from "./_components/Videos";
 import Subscribe from "./_components/Subscribe";
 import { getSiteSettings } from "@/sanity/queries/siteSettingsQueries";
 
-export const revalidate = 60;
-
 export default async function Home() {
   const content = await getHomepageContent();
   const siteSettings = await getSiteSettings();
